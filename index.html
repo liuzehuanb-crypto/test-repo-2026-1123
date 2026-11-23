@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <title>练习日 · 健身记录</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar"><a class="brand" href="#"><span class="brand-mark">练</span> 练习日<span class="brand-sub">TRAINING LOG</span></a><span class="live"><i></i> 本地记录已开启</span></header>
+    <section class="intro"><div><div class="eyebrow">YOUR DAILY TRAINING</div><h1>每一组，<em>都算数。</em></h1><p>专注训练，剩下的交给计时器。</p></div><div class="date-card"><span>今天</span><strong id="date"></strong></div></section>
+    <section class="layout">
+      <div class="panel workout"><div class="section-head"><div><div class="eyebrow">TODAY'S SESSION</div><h2>训练计划</h2></div><span class="pill" id="progress">0 / 0 组</span></div>
+        <form id="add-form" class="add-form"><label class="sr-only" for="exercise">动作名称</label><input id="exercise" placeholder="添加训练动作，例如：深蹲" maxlength="32" required><label class="sr-only" for="sets">组数</label><input id="sets" type="number" min="1" max="30" value="4" aria-label="目标组数"><button class="add-btn" type="submit">＋ 添加动作</button></form>
+        <div id="exercise-list"></div><div id="empty" class="empty"><span>✳</span><strong>今天还没有训练动作</strong><small>在上方添加一个动作，开始你的训练。</small></div>
+      </div>
+      <aside class="side"><div class="panel timer-panel"><div class="timer-top"><span class="eyebrow">REST TIMER</span><span class="timer-dot" id="timer-dot"></span></div><div class="timer" id="timer">00:00</div><div class="timer-label" id="timer-label">组间休息时间</div><div class="timer-controls"><button class="primary" id="timer-toggle">开始休息</button><button class="icon-btn" id="timer-reset" aria-label="重置计时器">↺</button></div><div class="rest-setting"><label for="rest-input">休息时长</label><div><input id="rest-input" type="number" min="10" max="600" step="5" value="90"><span>秒</span></div></div></div>
+      <div class="tip"><span>✦</span><p><strong>训练小贴士</strong><br>每组完成后点击“完成本组”，休息计时会自动开始。</p></div>
+      <button class="clear-btn" id="clear-workout">清空今日训练</button></aside>
+    </section><footer>把注意力放在当下这一组。<span>MOVE WITH INTENTION · 01</span></footer>
+  </main><script src="script.js"></script>
+</body></html>
